@@ -4,7 +4,7 @@
     "parameters" :  [ 
         ["int","scale","Musical Scale",1,9,1],
         ["int","chordAmt","Amount of chords",1,8,4],
-	["int","noteAmt","Amount of notes",2,5,3],
+	["int","noteAmt","Amount of notes",1,5,3],
 	["pct","chordlngth","Chord Length",1,200,100],
         ["int","chord1","Chord 1",0,7,1],
         ["int","chord2","Chord 2",0,7,1],
@@ -31,7 +31,10 @@
         ["int","rot7","Rotation 7",0,3,0],
         ["int","rot8","Rotation 8",0,3,0],
         ["int","transpose","Transpose",-4,4,0],
-	["int","basenote","Base Note",0,11,0]
+	["int","basenote","Base Note",0,11,0],
+	["int","bpmOrNoteIn","BPM or Note In",0,1,0],
+	["int","noteThrough","Let note through",0,1,0]
+
     ],
     "pages" : [ 
         ["pg_main","Main",["scale","chordAmt","noteAmt", "chordlngth"]],
@@ -41,7 +44,7 @@
 		["pg_chord58","Chord 5-8",["chord5","chord6", "chord7", "chord8"]], 
 		["pg_58pos","5-8 Position",["pos5","pos6", "pos7", "pos8"]],
 		["pg_58rot","5-8 Rotation",["rot5","rot6", "rot7", "rot8"]],
-		["pg_trans","Transposition",["transpose", "basenote"]]
+		["pg_trans","Transpose + Settings",["transpose", "basenote", "bpmOrNoteIn", "noteThrough"]]
     ]
 }
 
